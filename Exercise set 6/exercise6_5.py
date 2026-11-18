@@ -1,0 +1,22 @@
+# 1. LIST OF PRODUCTS (Exact list from Moodle)
+products = [
+    "K1565_2017_ST7745", "T2432_2019_FE84",
+    "T8551_2018_XA413", "T3345_2019_JK142",
+    "Y51372_2019_HJ2", "Y76715_2017_AB3",
+    "E98144_2018_21T", "T7733_2020_CE55",
+    "E7614_2021_XZA784", "E9722_2017_MHE67",
+    "Y82018_2020_FI95", "T61287_2021_IA293",
+    "E9152_2019_TY5", "T774_2021_OB672"
+]
+
+# 2. USER INPUT: Ask the user for the order code
+code = input("Give the order code:\n")
+
+# 3. LOOP & SEARCH: Check each product in the list
+for product in products:
+    parts = product.split("_")
+
+    # 4. MATCH & BREAK: If order code matches, print the year and stop the loop
+    if parts[0] == code:
+        print(f"Year of the order code: {parts[1]}")
+        break
